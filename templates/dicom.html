@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        .container{
-            background-color: blueviolet;
+
+        .dose-max {
+            /* background-color: blueviolet; */
+            width: 100px;
+            border: 2px solid;
+            border-radius: 10px;
+            margin-left: 80%;
+            
         }
     </style>
 </head>
+
 <body>
     <h1>Hola mundo dicom </h1>
     <h2>holi {{ variable }}</h2>
-    <div class="container">holi {{ dosismax }}</div>
+    <div class="dose-max"> La dosis máxima es:{{ dosismax }}</div>
     <div>holi {{ dose_array }}</div>
+    <div>holis </div>
+    <img src="data:image/png;base64,{{ pixel_data}}">
+    <pre>{{ pixel_data}}</pre>
+    <!-- <h1>Metadatos del archivo</h1>
+    <ul>
+        {% for key, value in structures_name.items %}
+        <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul> -->
+
 
 
 </body>
+
 </html>

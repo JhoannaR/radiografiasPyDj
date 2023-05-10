@@ -5,33 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DICOM</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        h1{
+            color: white;
+            margin-left: 40%;
+        }
+
+        body{background-color: rgba(23,173,215,255)}
 
         .dose-max {
-            /* background-color: blueviolet; */
-            width: 100px;
+            width: 200px;
             border: 2px solid;
             border-radius: 10px;
             margin-left: 80%;
+            size: 20px;
+            color:white;
             
+        }
+        .dose-array{
+            width: 40%;
+        }
+
+        .estructuras{
+            margin-left: 40%;
+
         }
     </style>
 </head>
 
 <body>
-    <h1>Hola mundo dicom </h1>
-    <h2>holi {{ variable }}</h2>
-    <div class="dose-max"> La dosis máxima es:{{ dosismax }}</div>
-    <div>holi {{ dose_array }}</div>
-    <div>holis </div>
-    <img src="data:image/png;base64,{{ pixel_data}}">
-    <pre>{{ pixel_data}}</pre>
+    <h1>Archivo DICOM</h1>
+    <!-- <h2>holi {{ variable }}</h2> -->
+    <div class="dose-max"> La dosis máxima es: {{ dosismax }}</div>
+    <!-- <div class="dose-array">Matriz de dosis {{ dose_array }}</div> -->
+    <!-- <img src="data:image/png;base64,{{ pixel_data}}"> -->
+    <pre class="estructuras">{{ pixel_data}}</pre>
+
     <!-- <h1>Metadatos del archivo</h1>
     <ul>
         {% for key, value in structures_name.items %}
